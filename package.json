@@ -1,8 +1,9 @@
 {
-	"name": "web-app",
+	"name": "VIDWAN-college",
 	"type": "module",
 	"version": "0.0.0",
-	"private": true,
+	"homepage":"https://nagab198.github.io/VIDWAN-college/",
+	"private": false,
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
