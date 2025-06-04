@@ -1,22 +1,9 @@
 import path from 'node:path';
 import react from '@vitejs/plugin-react';
-import { createLogger, defineConfig } from 'vite';
-console.warn = () => {};
-
-const logger = createLogger()
-const loggerError = logger.error
-
-logger.error = (msg, options) => {
-	if (options?.error?.toString().includes('CssSyntaxError: [postcss]')) {
-		return;
-	}
-
-	loggerError(msg, options);
-}
+import {  defineConfig } from 'vite';
 
 export default defineConfig({
-	customLogger: logger,
-	 base: '/vidwan-college/',
+	 base: '/vidwan-college',
 	plugins: [
 		react(),
 	],
