@@ -16,7 +16,7 @@ logger.error = (msg, options) => {
 
 export default defineConfig({
 	customLogger: logger,
-	base: '/VIDWAN-college/',
+	 base: '/vidwan-college/',
 	plugins: [
 		react(),
 	],
