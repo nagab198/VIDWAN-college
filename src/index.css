@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 20 50% 98%; /* Light beige/off-white */
+  --foreground: 220 15% 25%; /* Darker, slightly desaturated blue for main text */
+  --card: 0 0% 100%;
+  --card-foreground: 220 15% 25%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 15% 25%;
+  
+  --primary: 205 80% 55%; /* Light Blue - for primary actions, links */
+  --primary-foreground: 0 0% 100%; /* White text on light blue */
+
+  --secondary: 0 75% 60%; /* Red - for specific highlights, college name accents */
+  --secondary-foreground: 0 0% 100%; /* White text on red */
+  
+  --muted: 210 30% 96%; /* Lighter grey-blue for subtle backgrounds */
+  --muted-foreground: 215 20% 45%; /* Medium grey for less important text */
+  
+  --accent: 25 95% 53%; /* Keeping orange for very specific accents if needed, or can be changed */
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 210 20% 88%; /* Softer border color */
+  --input: 210 20% 94%;
+  --ring: 205 80% 55%; /* Light blue for focus rings */
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.gradient-bg-header {
+  /* Using primary (light blue) and a slightly darker shade of it for the header */
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(205, 80%, 45%) 100%);
+}
+
+.hero-pattern-subtle {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.college-name-main {
+  color: hsl(var(--secondary)); /* Red for VIDWAN */
+}
+.college-name-secondary {
+  color: hsl(var(--primary)); /* Light Blue for DEGREE COLLEGE */
+}
+
+
+.section-title {
+  color: hsl(var(--primary)); /* Light Blue for section titles */
+}
+
+.text-accent-custom-red {
+  color: hsl(var(--secondary)); /* Red for specific text accents */
+}
+
+.text-accent-custom-light-blue {
+  color: hsl(var(--primary)); /* Light Blue for specific text accents */
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary)); /* Light Blue buttons */
+  color: hsl(var(--primary-foreground));
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: hsl(205, 80%, 50%)); /* Slightly darker light blue on hover */
+}
+
+.btn-secondary-red {
+  background-color: hsl(var(--secondary)); /* Red buttons */
+  color: hsl(var(--secondary-foreground));
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary-red:hover {
+  background-color: hsl(0, 75%, 55%)); /* Slightly darker red on hover */
+}
+
+.btn-outline-primary {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.info-card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.course-card-edu {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-left: 5px solid hsl(var(--primary)); /* Light blue accent border */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card-edu:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 8px 20px hsla(var(--primary), 0.2);
+}
+
+.footer-bg {
+  background-color: hsl(220, 25%, 20%); /* Darker footer background */
+}
+
+.footer-link:hover {
+  color: hsl(var(--primary)); /* Light blue for footer links on hover */
+}
